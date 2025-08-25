@@ -200,10 +200,15 @@ func Crack() {
 		return
 	}
 
-	fmt.Printf("Input handshake to crack[0~%d]: ", len(handshakes)-1)
-	numReader := bufio.NewReader(os.Stdin)
-	numStr, _ := numReader.ReadString('\n')
-	numStr = strings.TrimSpace(numStr)
+	numStr := "0"
+	if len(handshakes)-1 != 0 {
+		fmt.Printf("Input handshake to crack[0~%d]: ", len(handshakes)-1)
+		numReader := bufio.NewReader(os.Stdin)
+
+		numStr, _ = numReader.ReadString('\n')
+		numStr = strings.TrimSpace(numStr)
+	}
+
 	num, err := strconv.Atoi(numStr)
 	if err != nil {
 		fmt.Println(err)
