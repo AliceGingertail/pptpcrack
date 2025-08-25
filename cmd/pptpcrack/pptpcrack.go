@@ -32,7 +32,7 @@ import (
 	"github.com/google/gopacket/pcap"
 	"github.com/google/gopacket/pcapgo"
 
-	"./eap"
+	"github.com/AliceGingertail/pptpcrack/eap"
 )
 
 const SnapshotLen = 2 << 18

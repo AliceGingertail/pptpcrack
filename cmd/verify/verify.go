@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"log"
 
-	"./eap"
+	"github.com/AliceGingertail/pptpcrack/eap"
 )
 
 func main() {
